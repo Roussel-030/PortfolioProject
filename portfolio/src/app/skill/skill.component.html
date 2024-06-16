@@ -1,0 +1,53 @@
+<div class="mt-[-120px]">
+
+    <section class="flex justify-center items-center lg:mx-32 md:pt-30 pt-10 mb-32 pb-10 mx-5">
+
+        <div class="max-w-screen-xl mx-auto w-full text-center">
+
+            <h3 class="font-bold text-4xl text-center">
+                Skills
+            </h3>
+
+            <div class="flex flex-col md:flex-row gap-4 md:gap-2 mt-6">
+
+                <div class="md:w-1/2 flex-col justify-center">
+                    <h2>Technical skills</h2>
+                    <div class="md:pr-12">
+                        @for (progressBar of progressBars; track progressBar) {
+                            <app-progress-bar 
+                                [dataImage]="progressBar.dataImage" 
+                                [dataSpan1]="progressBar.dataSpan1" 
+                                [dataSpan2]="progressBar.dataSpan2" 
+                                [colorSpan1]="progressBar.colorSpan1"
+                                [colorSpan2]="progressBar.colorSpan2"
+                                [colorBar]="progressBar.colorBar"
+                                [dataStyle]="progressBar.dataStyle">
+                            </app-progress-bar>
+                        }
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 flex-col justify-center">
+                    <h2>Professional skills</h2>
+                    <div class="md:pl-12">
+                        @for (professionalSkill of professionalSkills; track professionalSkill) {
+                            <app-progress-bar 
+                                [dataImage]="professionalSkill.dataImage" 
+                                [dataSpan1]="professionalSkill.dataSpan1" 
+                                [dataSpan2]="professionalSkill.dataSpan2" 
+                                [colorSpan1]="professionalSkill.colorSpan1"
+                                [colorSpan2]="professionalSkill.colorSpan2"
+                                [colorBar]="professionalSkill.colorBar"
+                                [dataStyle]="professionalSkill.dataStyle">
+                            </app-progress-bar>
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>

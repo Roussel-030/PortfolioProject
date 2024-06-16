@@ -1,0 +1,26 @@
+<div class="mt-[-120px]">
+  <section
+    class="flex justify-center items-center lg:mx-32 md:pt-30 pt-10 mb-32 pb-10 mx-5"
+  >
+    <div class="max-w-screen-xl mx-auto w-full text-center">
+      <h3 class="font-bold text-4xl text-center">Services</h3>
+
+      <div class="flex flex-col md:flex-row gap-4 md:gap-2 mt-6">
+        @for (service of services; track service) {
+
+        <div
+          class="md:w-1/3 flex justify-center md:pr-4 rounded-2xl border border-gray-300 shadow-lg"
+        >
+          <app-card-service
+            [dataImage]="service.dataImage"
+            [dataH4]="service.dataH4"
+            [dataP]="service.dataP"
+          >
+          </app-card-service>
+        </div>
+
+        }
+      </div>
+    </div>
+  </section>
+</div>
