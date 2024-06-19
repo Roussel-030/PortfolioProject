@@ -113,3 +113,27 @@ export const professionalSkills = [
         dataStyle: "width: 80%"
     }
 ];
+
+export const dataProject = [
+    {
+        dataImage: "https://via.placeholder.com/300",
+        dataHref1: "",
+        dataHref2: ""
+    },
+    {
+        dataImage: "https://via.placeholder.com/300",
+        dataHref1: "",
+        dataHref2: ""
+    },
+    {
+        dataImage: "https://via.placeholder.com/300",
+        dataHref1: "",
+        dataHref2: ""
+    },
+    {
+        dataImage: "https://via.placeholder.com/300",
+        dataHref1: "",
+        dataHref2: ""
+    }
+
+];

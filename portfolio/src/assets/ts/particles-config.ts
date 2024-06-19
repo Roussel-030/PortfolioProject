@@ -1,14 +1,14 @@
 export const particlesConfig = {
     particles: {
         number: {
-            value: 80,
+            value: 15,
             density: {
                 enable: true,
                 value_area: 800
             }
         },
         color: {
-            value: '#000000'
+            value: '#FFFFFF'
         },
         shape: {
             type: 'circle',
@@ -21,7 +21,7 @@ export const particlesConfig = {
             }
         },
         opacity: {
-            value: 0.5,
+            value: 0.8,
             random: false,
             anim: {
                 enable: false,
@@ -43,7 +43,7 @@ export const particlesConfig = {
         line_linked: {
             enable: true,
             distance: 150,
-            color: '#ffffff',
+            color: '#374151',
             opacity: 0.4,
             width: 1
         },

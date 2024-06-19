@@ -5,7 +5,11 @@
 
 body {
     font-family: sans-serif;
-    /* background: rgb(22, 30, 91);
-    color: white; */
+    background: #111827;
+}
+
+.custom-size {
+    width: 260px;
+    height: 350px;
 }
 

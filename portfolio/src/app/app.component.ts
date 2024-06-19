@@ -6,19 +6,23 @@ import { AboutComponent } from './about/about.component';
 import { ServiceComponent } from './service/service.component';
 import { particlesConfig } from '../assets/ts/particles-config';
 import { SkillComponent } from './skill/skill.component';
+import { ProjectComponent } from './project/project.component';
+import { ContactComponent } from './contact/contact.component';
 
 declare let particlesJS: any;
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HomeComponent, AboutComponent, ServiceComponent, SkillComponent],
+  imports: [RouterOutlet, HeaderComponent, HomeComponent, AboutComponent, ServiceComponent, SkillComponent, ProjectComponent, ContactComponent],
   template: `
     <app-header />
     <app-home />
     <app-about />
     <app-service />
     <app-skill />
+    <app-project />
+    <app-contact />
     <router-outlet />
   `,
   styles: [],
