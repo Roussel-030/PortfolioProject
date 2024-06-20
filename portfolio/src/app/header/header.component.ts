@@ -1,16 +1,19 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { ViewportScroller, isPlatformBrowser } from '@angular/common';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RightSidebarComponent } from './right-sidebar/right-sidebar.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, RightSidebarComponent],
   templateUrl: './header.component.html',
   styles: ``
 })
 export class HeaderComponent {
+  @ViewChild(RightSidebarComponent) rightSidebar!: RightSidebarComponent;
+
   constructor(private viewportScroller: ViewportScroller, @Inject(PLATFORM_ID) private platformId: Object, private library: FaIconLibrary) {
     library.addIcons(faBars);
   }
@@ -23,10 +26,14 @@ export class HeaderComponent {
         const elementPosition = element.offsetTop - headerHeight;
         window.scrollTo({
           top: elementPosition,
-          behavior: 'smooth'
+          behavior: 'smooth' 
         });
       }
     }
+  }
+
+  toggleSidebar(): void {
+    this.rightSidebar.toggleSidebar();
   }
 
 }
