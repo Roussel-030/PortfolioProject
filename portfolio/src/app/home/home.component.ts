@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../button/button.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [TranslateModule],
   templateUrl: './home.component.html',
   styles: ``
 })
 export class HomeComponent {
-
+  
 }

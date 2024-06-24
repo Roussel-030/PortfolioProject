@@ -1,5 +1,15 @@
 <header>
-  <nav class="bg-gray-900 backdrop-blur border border-gray-700 fixed w-full z-30 top-0 start-0" style="background: radial-gradient(circle at 10% 20%, #0B3B48 15%, #072A36 45%,#111827 100%);">
+  <nav
+    class="bg-gray-900 backdrop-blur border border-gray-700 fixed w-full z-30 top-0 start-0"
+    style="
+      background: radial-gradient(
+        circle at 10% 20%,
+        #0b3b48 15%,
+        #072a36 45%,
+        #111827 100%
+      );
+    "
+  >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
@@ -18,11 +28,7 @@
         >
       </a>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <!-- <button 
-                    type="button"
-                    class="text-white text-sm bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Get started
-                </button> -->
+        <app-dropdown-sidebar />
         <button
           (click)="toggleSidebar()"
           data-collapse-toggle="navbar-sticky"
@@ -43,52 +49,52 @@
         >
           <li>
             <a
+              translate="header.home"
               (click)="scrollToAnchor('sectionHome')"
-              class="block py-2 font-semibold px-3 text-sm text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 cursor-pointer"
+              class="block py-2 font-semibold px-3 text-sm bg-blue-700 rounded md:bg-transparent md:p-0 cursor-pointer"
               aria-current="page"
-              >Home
-            </a
             >
+            </a>
           </li>
           <li>
             <a
+              translate="header.about"
               (click)="scrollToAnchor('sectionAbout')"
-              class="block py-2 px-3 text-white font-semibold text-sm rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
-              >About
-            </a
+              class="block py-2 px-3 text-white font-semibold text-sm rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2cc9d1] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
             >
+            </a>
           </li>
           <li>
             <a
+              translate="header.services"
               (click)="scrollToAnchor('sectionService')"
-              class="block py-2 px-3 text-white font-semibold text-sm rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
-              >Services
-            </a
+              class="block py-2 px-3 text-white font-semibold text-sm rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2cc9d1] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
             >
+            </a>
           </li>
           <li>
             <a
+              translate="header.skills"
               (click)="scrollToAnchor('sectionSkill')"
-              class="block py-2 px-3 text-white font-semibold text-sm rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
-              >Skills
-            </a
+              class="block py-2 px-3 text-white font-semibold text-sm rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2cc9d1] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
             >
+            </a>
           </li>
           <li>
             <a
+              translate="header.projects"
               (click)="scrollToAnchor('sectionProject')"
-              class="block py-2 px-3 text-white font-semibold text-sm rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
-              >Projects
-            </a
+              class="block py-2 px-3 text-white font-semibold text-sm rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2cc9d1] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
             >
+            </a>
           </li>
           <li>
             <a
+              translate="header.contact"
               (click)="scrollToAnchor('sectionContact')"
-              class="block py-2 px-3 text-white font-semibold text-sm rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
-              >Contact
-            </a
+              class="block py-2 px-3 text-white font-semibold text-sm rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#2cc9d1] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
             >
+            </a>
           </li>
         </ul>
       </div>

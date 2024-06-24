@@ -1,0 +1,18 @@
+<div class="relative">
+    <button type="button" class="flex items-center justify-between py-2 px-4 hover:text-kalyssi-400" (click)="toggleDropdown()">
+        <img class="w-[30px] h-[20px] mr-2" [src]="selectedLanguage?.flagUrl" alt="image flag" />
+        <fa-icon [icon]="['fas', 'sort-desc']" class="mr-2" class="text-white"></fa-icon>
+    </button>
+    @if (isDropdownOpen) {
+        <div class="absolute top-10 right-0 z-10 bg-white border border-gray-200 rounded-lg shadow-md divide-y divide-gray-100">
+            @for (language of dataDropDown; track language) {
+                <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" (click)="selectLanguage(language)">
+                    <div class="flex items-center">
+                      <img class="w-[20px] h-[15px] mr-2" [src]="language.flagUrl" alt="Language Flag" />
+                      {{ language.name }}
+                    </div>
+                </button>
+            }
+        </div>
+    }
+</div>

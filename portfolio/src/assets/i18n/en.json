@@ -1,0 +1,39 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+
+    "home": {
+        "welcome": "Hello, my name is"
+    },
+
+    "about": {
+        "about_me": ""
+    },
+
+    "services": {
+        "card1": {
+            "dataH4": "WEB SOLUTIONS",
+            "dataP": "Creation of dynamic and responsive websites using Angular for the frontend and Java (Spring Boot) or JavaEE for the backend."
+        },
+        "card2": {
+            "dataH4": "RESTFUL API",
+            "dataP": "Design and development of robust and secure RESTful APIs in Java to enable communication between different applications and services."
+        },
+        "card3": {
+            "dataH4": "MAINTENANCE",
+            "dataP": "Modernization of existing architectures to improve scalability and maintainability."
+        }
+    },
+
+    "skills": {},
+
+    "projects": {},
+    
+    "contact_me": {}
+}

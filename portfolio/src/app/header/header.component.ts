@@ -3,11 +3,13 @@ import { ViewportScroller, isPlatformBrowser } from '@angular/common';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RightSidebarComponent } from './right-sidebar/right-sidebar.component';
+import { DropdownSidebarComponent } from './dropdown-sidebar/dropdown-sidebar.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FontAwesomeModule, RightSidebarComponent],
+  imports: [FontAwesomeModule, RightSidebarComponent, DropdownSidebarComponent, TranslateModule],
   templateUrl: './header.component.html',
   styles: ``
 })

@@ -13,3 +13,21 @@ body {
     height: 350px;
 }
 
+a {
+    color: #2cc9d1;
+}
+
+h3,
+.cardService {
+    background: radial-gradient(60.25% 73.6% at 14.86% 21.69%, #2cc9d1 60%, #cdb2b2 100%);
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    background: radial-gradient(60.25% 73.6% at 14.86% 21.69%, #2cc9d1 60%, #cdb2b2 100%);
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

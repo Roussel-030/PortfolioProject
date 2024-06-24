@@ -1,16 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardServiceComponent } from './card-service/card-service.component';
-import { services } from '../mockData';
+import { services, translateMockDataService } from './mockDataService';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-service',
   standalone: true,
-  imports: [CardServiceComponent],
+  imports: [CardServiceComponent, TranslateModule],
   templateUrl: './service.component.html',
   styles: ``
 })
-export class ServiceComponent {
+export class ServiceComponent implements OnInit{
 
-  services: {dataImage: string, dataH4: string, dataP: string}[] = services;
+  // services: { dataImage: string, dataH4: string, dataP: string }[] = [];
+
+  // constructor(private translateService: TranslateService) {
+  //   this.services = translateMockDataService(services, this.translateService);
+  //   console.log("Translated services:", this.services);
+  // }
+
+  services: { dataImage: string, dataH4: string, dataP: string }[] = [];
+
+  constructor(private translateService: TranslateService) { }
+
+  ngOnInit(): void {
+    this.translateServices();
+  }
+
+  translateServices(): void {
+    this.services = translateMockDataService(services, this.translateService);
+    console.log("Translated services:", this.services);
+  }
 
 }
