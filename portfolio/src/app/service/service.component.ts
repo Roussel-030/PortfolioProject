@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CardServiceComponent } from './card-service/card-service.component';
-import { services, translateMockDataService } from './mockDataService';
+import { TypeTranslate, services, translateServicesData } from './mockDataService';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,26 +10,20 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './service.component.html',
   styles: ``
 })
-export class ServiceComponent implements OnInit{
+export class ServiceComponent implements OnInit {
 
-  // services: { dataImage: string, dataH4: string, dataP: string }[] = [];
+  services: TypeTranslate[] = [];
 
-  // constructor(private translateService: TranslateService) {
-  //   this.services = translateMockDataService(services, this.translateService);
-  //   console.log("Translated services:", this.services);
-  // }
-
-  services: { dataImage: string, dataH4: string, dataP: string }[] = [];
-
-  constructor(private translateService: TranslateService) { }
+  constructor(private translateService: TranslateService) {}
 
   ngOnInit(): void {
-    this.translateServices();
+    this.translateService.onLangChange.subscribe(() => {
+      this.updateTranslations();
+    });
   }
 
-  translateServices(): void {
-    this.services = translateMockDataService(services, this.translateService);
-    console.log("Translated services:", this.services);
+  private async updateTranslations() {
+    this.services = await translateServicesData(this.translateService);
   }
 
 }

@@ -9,14 +9,23 @@
     },
 
     "home": {
-        "welcome": "Hello, my name is"
+        "welcome": "Hello, my name is",
+        "download_cv": "Download CV"
     },
 
     "about": {
-        "about_me": ""
+        "about_me": "About me",
+        "card": {
+            "text1": "Second year of master's degree training.",
+            "text2": "First year of master's degree training.",
+            "text3": "Third year of undergraduate training in Software Engineering and Database. (With honors)",
+            "text4": "Second year of undergraduate training.",
+            "text5": "First year of undergraduate training."
+        }
     },
 
     "services": {
+        "services": "Services",
         "card1": {
             "dataH4": "WEB SOLUTIONS",
             "dataP": "Creation of dynamic and responsive websites using Angular for the frontend and Java (Spring Boot) or JavaEE for the backend."
@@ -31,9 +40,29 @@
         }
     },
 
-    "skills": {},
+    "skills": {
+         "skills": "Skills",
+         "technical_skills": "Technical skills",
+         "professional_skills": "Professional skills",
+         "card": {
+            "creativity": "Creativity",
+            "communication": "Communication",
+            "problem_solving": "Problem solving",
+            "teamwork": "Teamwork"
+        }
+    }, 
 
-    "projects": {},
+    "projects": {
+        "projects": "Projects",
+        "card": {
+            "view_code": "View code",
+            "demo": "Demo"
+        }
+    },
     
-    "contact_me": {}
+    "contact": {
+        "contact_me": "Contact me",
+        "val_object": "Object",
+        "send": "Send"
+    }
 }

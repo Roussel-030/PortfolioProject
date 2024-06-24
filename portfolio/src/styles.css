@@ -17,10 +17,12 @@ a {
     color: #2cc9d1;
 }
 
-h3,
-.cardService {
-    background: radial-gradient(60.25% 73.6% at 14.86% 21.69%, #2cc9d1 60%, #cdb2b2 100%);
+h3 {
     text-transform: uppercase;
+}
+
+h3, .cardService, .btnDownload {
+    background: radial-gradient(60.25% 73.6% at 14.86% 21.69%, #2cc9d1 60%, #cdb2b2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

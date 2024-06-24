@@ -4,31 +4,30 @@
 
         <div class="max-w-screen-xl mx-auto w-full text-center">
 
-            <h3 class="text-5xl text-center">
-                Skills
+            <h3 class="text-5xl text-center" translate="skills.skills">
             </h3>
 
             <div class="flex flex-col md:flex-row gap-4 md:gap-2 mt-2 border border-gray-700 rounded-2xl p-6 shadow-lg bg-[#0B3B48]">
 
                 <div class="md:w-1/2 flex-col justify-center">
-                    <h2>Technical skills</h2>
+                    <h2 translate="skills.technical_skills"></h2>
                     <div class="md:pr-12">
-                        @for (progressBar of progressBars; track progressBar) {
+                        @for (technicalSkill of technicalSkills; track technicalSkill) {
                             <app-progress-bar 
-                                [dataImage]="progressBar.dataImage" 
-                                [dataSpan1]="progressBar.dataSpan1" 
-                                [dataSpan2]="progressBar.dataSpan2" 
-                                [colorSpan1]="progressBar.colorSpan1"
-                                [colorSpan2]="progressBar.colorSpan2"
-                                [colorBar]="progressBar.colorBar"
-                                [dataStyle]="progressBar.dataStyle">
+                                [dataImage]="technicalSkill.dataImage" 
+                                [dataSpan1]="technicalSkill.dataSpan1" 
+                                [dataSpan2]="technicalSkill.dataSpan2" 
+                                [colorSpan1]="technicalSkill.colorSpan1"
+                                [colorSpan2]="technicalSkill.colorSpan2"
+                                [colorBar]="technicalSkill.colorBar"
+                                [dataStyle]="technicalSkill.dataStyle">
                             </app-progress-bar>
                         }
                     </div>
                 </div>
 
                 <div class="md:w-1/2 flex-col justify-center">
-                    <h2>Professional skills</h2>
+                    <h2 translate="skills.professional_skills"></h2>
                     <div class="md:pl-12">
                         @for (professionalSkill of professionalSkills; track professionalSkill) {
                             <app-progress-bar 

@@ -1,15 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
-import { progressBars, professionalSkills } from '../mockData';
+import { technicalSkills, professionalSkills, TypeSkill, translateSkillData } from './mockDataSkill';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-skill',
   standalone: true,
-  imports: [ProgressBarComponent],
+  imports: [ProgressBarComponent, TranslateModule],
   templateUrl: './skill.component.html',
   styles: ``
 })
-export class SkillComponent {
-  progressBars: {dataImage: string, dataSpan1: string, dataSpan2: string, colorSpan1: string, colorSpan2: string, colorBar: string, dataStyle: string}[] = progressBars;
-  professionalSkills: {dataImage: string, dataSpan1: string, dataSpan2: string, colorSpan1: string, colorSpan2: string, colorBar: string, dataStyle: string}[] = professionalSkills;
+export class SkillComponent implements OnInit {
+  technicalSkills: TypeSkill[] = technicalSkills;
+  professionalSkills: TypeSkill[] = professionalSkills;
+
+  constructor(private translateService: TranslateService) {}
+
+  ngOnInit(): void {
+    this.translateService.onLangChange.subscribe(() => {
+      this.updateTranslations();
+    });
+  }
+
+  private async updateTranslations() {
+    this.professionalSkills = await translateSkillData(this.translateService);
+  }
+
 }

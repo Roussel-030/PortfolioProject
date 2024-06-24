@@ -9,14 +9,23 @@
     },
 
     "home": {
-        "welcome": "Bonjour, je m'appelle"
+        "welcome": "Bonjour, je m'appelle",
+        "download_cv": "Télécharger le CV"
     },
 
     "about": {
-        "about_me": ""
+        "about_me": "A PROPOS",
+        "card": {
+            "text1": "Deuxième année de formation en master.",
+            "text2": "Première année de formation en master.",
+            "text3": "Troisième année de formation en licence et obtention du diplôme de licence en Génie logiciel et Base de données. (Mention bien)",
+            "text4": "Deuxième année de formation en licence.",
+            "text5": "Première année de formation en licence."
+        }
     },
 
     "services": {
+        "services": "Services",
         "card1": {
             "dataH4": "SOLUTIONS WEB",
             "dataP": "Création des sites web dynamiques et réactifs en utilisant Angular pour le frontend et Java (Spring Boot) ou JavaEE pour le backend."
@@ -31,9 +40,29 @@
         }
     },
 
-    "skills": {},
+    "skills": {
+        "skills": "Compétences",
+        "technical_skills": "Compétences techniques",
+        "professional_skills": "Compétences professionnelles",
+        "card": {
+            "creativity": "Créativité",
+            "communication": "Communication",
+            "problem_solving": "Résolution de problèmes",
+            "teamwork": "Travail d'équipe"
+        }
+    }, 
 
-    "projects": {},
+    "projects": {
+        "projects": "Projets",
+        "card": {
+            "view_code": "Voir le code",
+            "demo": "Demo"
+        }
+    },
 
-    "contact_me": {}
+    "contact": {
+        "contact_me": "Me contacter",
+        "val_object": "Objet",
+        "send": "Envoyer"
+    }
 }

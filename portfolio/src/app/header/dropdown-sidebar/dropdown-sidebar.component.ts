@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import { dataDropDown } from '../../mockData';
+import { dataDropDown } from './mockDataDropdown';
 import { TranslateService } from '@ngx-translate/core';
 
 

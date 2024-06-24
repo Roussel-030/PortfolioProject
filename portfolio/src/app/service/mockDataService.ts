@@ -1,6 +1,7 @@
 import { TranslateService } from "@ngx-translate/core";
+import { firstValueFrom } from "rxjs";
 
-interface TypeTranslate {
+export interface TypeTranslate {
     dataImage: string,
     dataH4: string,
     dataP: string
@@ -24,27 +25,20 @@ export const services: TypeTranslate[] = [
     }
 ];
 
+export async function translateServicesData(translateService: TranslateService): Promise<TypeTranslate[]> {
+    const translatedServices: TypeTranslate[] = [];
 
-
-// export function translateMockDataService(mockData: TypeTranslate[], translateService: TranslateService): TypeTranslate[] {
-//     return mockData.map(item => ({
-//         ...item,
-//         dataH4: translateService.instant(item.dataH4),
-//         dataP: translateService.instant(item.dataP)
-//     }));
-// }
-
-export function translateMockDataService(mockData: TypeTranslate[], translateService: TranslateService): TypeTranslate[] {
-    console.log("Starting translation process...");
-    const translatedData = mockData.map(item => {
-        const translatedItem = {
-            ...item,
-            dataH4: translateService.instant(item.dataH4),
-            dataP: translateService.instant(item.dataP)
+    for (const service of services) {
+        const translatedService: TypeTranslate = {
+            dataImage: service.dataImage,
+            dataH4: await firstValueFrom(translateService.get(service.dataH4)),
+            dataP: await firstValueFrom(translateService.get(service.dataP))
         };
-        console.log(`Translated item: ${JSON.stringify(translatedItem)}`);
-        return translatedItem;
-    });
-    console.log("Translation process completed.");
-    return translatedData;
+
+        translatedServices.push(translatedService);
+    }
+
+    return translatedServices;
 }
+
+

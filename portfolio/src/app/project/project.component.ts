@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { dataProject } from '../mockData';
+import { dataProject } from './mockDataProject';
 import { CardProjectComponent } from './card-project/card-project.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [CardProjectComponent],
+  imports: [CardProjectComponent, TranslateModule],
   templateUrl: './project.component.html',
   styles: ``
 })

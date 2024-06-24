@@ -1,4 +1,17 @@
-export const progressBars = [
+import { TranslateService } from "@ngx-translate/core";
+import { firstValueFrom } from "rxjs";
+
+export interface TypeSkill {
+    dataImage: string,
+    dataSpan1: string,
+    dataSpan2: string,
+    colorSpan1: string,
+    colorSpan2: string,
+    colorBar: string,
+    dataStyle: string
+}
+
+export const technicalSkills: TypeSkill[] = [
 
     {
         dataImage: "../../assets/images/javascript/images.png",
@@ -57,10 +70,10 @@ export const progressBars = [
 
 ];
 
-export const professionalSkills = [
+export const professionalSkills: TypeSkill[] = [
     {
         dataImage: "../../assets/images/creativity/images.png",
-        dataSpan1: "Creativity",
+        dataSpan1: "skills.card.creativity",
         dataSpan2: "80%",
         colorSpan1: "text-gray-100",
         colorSpan2: "text-gray-100",
@@ -69,7 +82,7 @@ export const professionalSkills = [
     },
     {
         dataImage: "../../assets/images/communication/images.png",
-        dataSpan1: "Communication",
+        dataSpan1: "skills.card.communication",
         dataSpan2: "80%",
         colorSpan1: "text-gray-100",
         colorSpan2: "text-gray-100",
@@ -78,16 +91,16 @@ export const professionalSkills = [
     },
     {
         dataImage: "../../assets/images/problemSolving/images.png",
-        dataSpan1: "Problem solving",
+        dataSpan1: "skills.card.problem_solving",
         dataSpan2: "80%",
         colorSpan1: "text-gray-100",
         colorSpan2: "text-gray-100",
         colorBar: "bg-gray-700",
-        dataStyle: "width: 80%"
+        dataStyle: "width: 80%" 
     },
     {
         dataImage: "../../assets/images/teamwork/images.png",
-        dataSpan1: "Teamwork",
+        dataSpan1: "skills.card.teamwork",
         dataSpan2: "80%",
         colorSpan1: "text-gray-100",
         colorSpan2: "text-gray-100",
@@ -96,58 +109,21 @@ export const professionalSkills = [
     }
 ];
 
-export const dataProject = [
-    {
-        dataImage: "https://via.placeholder.com/300",
-        dataHref1: "",
-        dataHref2: ""
-    },
-    {
-        dataImage: "https://via.placeholder.com/300",
-        dataHref1: "",
-        dataHref2: ""
-    },
-    {
-        dataImage: "https://via.placeholder.com/300",
-        dataHref1: "",
-        dataHref2: ""
-    },
-    {
-        dataImage: "https://via.placeholder.com/300",
-        dataHref1: "",
-        dataHref2: ""
+export async function translateSkillData(translateService: TranslateService): Promise<TypeSkill[]> {
+    const translateSkills: TypeSkill[] = [];
+
+    for(const skill of professionalSkills) {
+        const translateSkill: TypeSkill = {
+            dataImage: skill.dataImage,
+            dataSpan1: await firstValueFrom(translateService.get(skill.dataSpan1)),
+            dataSpan2: skill.dataSpan2,
+            colorSpan1: skill.colorSpan1,
+            colorSpan2: skill.colorSpan2,
+            colorBar: skill.colorBar,
+            dataStyle: skill.dataStyle
+        };
+        translateSkills.push(translateSkill);
     }
 
-];
-
-
-export const dataAbout = [
-    {
-        order: "03/10/22 - 29/12/22",
-        text: "Commencer la journée avec une réunion d'équipe.",
-    },
-    {
-        order: "002",
-        text: "Vérifier et répondre aux emails importants.",
-    },
-    {
-        order: "003",
-        text: "Travailler sur le projet de développement de la nouvelle fonctionnalité.",
-    },
-    {
-        order: "004",
-        text: "Révision du code et correction des bugs signalés.",
-    },
-    {
-        order: "005",
-        text: "Pause déjeuner.",
-    }
-];
-
-export const dataDropDown = [
-    { name: 'en', flagUrl: '../../../assets/images/flag/Etats_unis.png' },
-    { name: 'fr', flagUrl: '../../../assets/images/flag/France.png' },
-    { name: 'mg', flagUrl: '../../../assets/images/flag/Madagascar.png' }
-];
-
-
+    return translateSkills;
+} 
