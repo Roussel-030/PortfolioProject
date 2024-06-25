@@ -1,11 +1,14 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-right-sidebar',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, FontAwesomeModule, TranslateModule],
   templateUrl: './right-sidebar.component.html',
   styles: [`
     .sidebar-hidden {
@@ -22,7 +25,9 @@ export class RightSidebarComponent {
   @Input() scrollToAnchor!: (anchor: string) => void;
   isVisible: boolean = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, library: FaIconLibrary) {
+    library.addIconPacks(fas);
+  }
 
   handleClick(anchor: string): void {
     if (isPlatformBrowser(this.platformId) && this.scrollToAnchor) {

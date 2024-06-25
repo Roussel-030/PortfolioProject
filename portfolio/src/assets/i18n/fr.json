@@ -10,6 +10,7 @@
 
     "home": {
         "welcome": "Bonjour, je m'appelle",
+        "introduction": "Je suis développeur Full Stack spécialisé en Java et Angular, passionné par la création de solutions logicielles innovantes.",
         "download_cv": "Télécharger le CV"
     },
 

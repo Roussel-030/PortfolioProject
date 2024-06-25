@@ -11,7 +11,7 @@ export const particlesConfig = {
             value: '#FFFFFF'
         },
         shape: {
-            type: 'star',
+            type: 'circle',
             stroke: {
                 width: 0,
                 color: '#000000'
@@ -31,7 +31,7 @@ export const particlesConfig = {
             }
         },
         size: {
-            value: 3,
+            value: 2,
             random: true,
             anim: {
                 enable: false,
@@ -71,7 +71,8 @@ export const particlesConfig = {
             },
             onclick: {
                 enable: true,
-                mode: 'push'
+                mode: ''
+                // mode: 'push'
             },
             resize: true
         },

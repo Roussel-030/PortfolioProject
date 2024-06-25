@@ -30,7 +30,7 @@ declare let particlesJS: any;
 export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
-    //this.loadParticles();
+    this.loadParticles();
   }
 
   loadParticles(): void {
