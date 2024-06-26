@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -14,7 +13,7 @@ declare let particlesJS: any;
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HomeComponent, AboutComponent, ServiceComponent, SkillComponent, ProjectComponent, ContactComponent],
+  imports: [HeaderComponent, HomeComponent, AboutComponent, ServiceComponent, SkillComponent, ProjectComponent, ContactComponent],
   template: `
     <app-header />
     <app-home />
@@ -23,7 +22,6 @@ declare let particlesJS: any;
     <app-skill />
     <app-project />
     <app-contact />
-    <router-outlet />
   `,
   styles: [],
 })
