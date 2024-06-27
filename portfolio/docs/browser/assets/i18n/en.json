@@ -1,0 +1,69 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+
+    "home": {
+        "welcome": "Hello, my name is",
+        "introduction": "I am a Full Stack developer specializing in Java and Angular, passionate about creating innovative software solutions.",
+        "download_cv": "Download CV"
+    },
+
+    "about": {
+        "about_me": "About me",
+        "card": {
+            "text1": "Second year of master's degree training.",
+            "text2": "First year of master's degree training.",
+            "text3": "Third year of undergraduate training in Software Engineering and Database. (With honors)",
+            "text4": "Second year of undergraduate training.",
+            "text5": "First year of undergraduate training."
+        }
+    },
+
+    "services": {
+        "services": "Services",
+        "card1": {
+            "dataH4": "WEB SOLUTIONS",
+            "dataP": "Creation of dynamic and responsive websites using Angular for the frontend and Java (Spring Boot) or JavaEE for the backend."
+        },
+        "card2": {
+            "dataH4": "RESTFUL API",
+            "dataP": "Design and development of robust and secure RESTful APIs in Java to enable communication between different applications and services."
+        },
+        "card3": {
+            "dataH4": "MAINTENANCE",
+            "dataP": "Modernization of existing architectures to improve scalability and maintainability."
+        }
+    },
+
+    "skills": {
+         "skills": "Skills",
+         "technical_skills": "Technical skills",
+         "professional_skills": "Professional skills",
+         "card": {
+            "creativity": "Creativity",
+            "communication": "Communication",
+            "problem_solving": "Problem solving",
+            "teamwork": "Teamwork"
+        }
+    }, 
+
+    "projects": {
+        "projects": "Projects",
+        "card": {
+            "view_code": "View code",
+            "demo": "Demo"
+        }
+    },
+    
+    "contact": {
+        "contact_me": "Contact me",
+        "val_object": "Object",
+        "send": "Send"
+    }
+}
